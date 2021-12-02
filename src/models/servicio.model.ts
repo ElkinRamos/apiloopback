@@ -46,17 +46,16 @@ export class Servicio extends Entity {
   })
   dinero: number;
 
-  //pertenece a
-  @belongsTo(() => Ruta, {name: 'rutaFk'})
-  ruta: string;
-
-  /* por tener relacion
-  @property({
+  //se cambia propiedad por tener relacion con otra entidad (ruta con servicio)
+  /*@property({
     type: 'string',
     required: true,
   })
   ruta: string;
 */
+//pertenece a
+  @belongsTo(() => Ruta, {name: 'rutaFk'})
+  ruta: string;
 
   constructor(data?: Partial<Servicio>) {
     super(data);

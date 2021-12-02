@@ -10,26 +10,25 @@ export class Ruta extends Entity {
   })
   id?: string;
 
-
-  /* se borra porque se van a modificar al tener una relacion
+  //se cambia propiedad por tener relacion con otra entidad (ruta origen y destino con estaciones)
+  /*  @property({
+      type: 'string',
+      required: true,
+    })
+    origen: string;
   @property({
-    type: 'string',
-    required: true,
-  })
-  origen: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  destino: string;
-*/
-
+    type: 'string'
+    required: true
+    })
+    destino: string;
+  */
   //pertenece a
-  @belongsTo(() => Estacion, {name: 'destinoFk'})
-  destino: string;
   @belongsTo(() => Estacion, {name: 'origenFk'})
   origen: string;
+
+  @belongsTo(() => Estacion, {name: 'detinoFk'})
+  destino: string;
+
   @property({
     type: 'number',
     required: true,

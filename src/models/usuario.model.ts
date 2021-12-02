@@ -1,8 +1,5 @@
 import {Entity, model, property} from '@loopback/repository';
 
-/*para que ingrese exclusivamente con un nombre
-@model(name: 'usuario', settings:{strict: false})
-*/
 @model()
 export class Usuario extends Entity {
   @property({

@@ -33,6 +33,6 @@ export class RutaEstacionController {
   async getEstacion(
     @param.path.string('id') id: typeof Ruta.prototype.id,
   ): Promise<Estacion> {
-    return this.rutaRepository.destinoFk(id);
+    return this.rutaRepository.detinoFk(id);
   }
 }
